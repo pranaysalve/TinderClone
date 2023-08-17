@@ -4,6 +4,7 @@ import { BlurView } from "expo-blur";
 
 const CardView = (props) => {
   const { name, image, bio } = props.user;
+
   return (
     <View style={styles.card}>
       <ImageBackground
@@ -12,10 +13,10 @@ const CardView = (props) => {
         }}
         style={styles.image}
       >
-        <BlurView intensity={8} style={styles.cardtext}>
-          <Text style={styles.name}>{name}</Text>
-          <Text style={styles.bio}>{bio}</Text>
-        </BlurView>
+        {/* <BlurView intensity={8} style={styles.cardtext}> */}
+        <Text style={styles.name}>{name}</Text>
+        <Text style={styles.bio}>{bio}</Text>
+        {/* </BlurView> */}
       </ImageBackground>
     </View>
   );
@@ -29,8 +30,8 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
   },
   card: {
-    width: "95%",
-    height: "70%",
+    width: "100%",
+    height: "100%",
     borderRadius: 10,
     shadowColor: "#000",
     shadowOffset: {
@@ -40,11 +41,16 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.32,
     shadowRadius: 5.46,
     elevation: 9,
+    backgroundColor: "#fefefe",
   },
   name: {
     color: "white",
     fontSize: 30,
     fontWeight: "bold",
+  },
+  message: {
+    color: "black",
+    fontSize: 18,
   },
   bio: {
     color: "white",

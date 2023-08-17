@@ -1,15 +1,16 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View } from "react-native";
-import { BlurView } from "expo-blur";
-import CardView from "./src/components/tindercard";
-import users from "./assets/data/users";
+import React from "react";
+import { SafeAreaView, StyleSheet, View } from "react-native";
+import { SwippingCard } from "./src/screen/SwippingCard.screen";
+import Matches from "./src/screen/Matches.screen";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <CardView user={users[3]} />
-      <StatusBar style="auto" />
-    </View>
+    <>
+      {/* <View style={styles.container}> */}
+      <Matches />
+      {/* <SwippingCard /> */}
+      {/* </View> */}
+    </>
   );
 }
 
@@ -18,9 +19,5 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     flex: 1,
-    // flex: 1,
-    // backgroundColor: "#fff",
-    // alignItems: "center",
-    // justifyContent: "center",
   },
 });
